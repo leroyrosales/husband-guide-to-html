@@ -4,7 +4,7 @@
 
 First thing's first, to create a paragraph of text, simply wrap your text in a `<p>` tag, and then close your paragraph with `</p>`. You can copy and paste the below code to make a paragraph.
 
-``` html
+``` html`
 <p>This ia paragraph of text.</p>
 
 <p>This is another paragraph.</p>
@@ -101,15 +101,20 @@ Note that the `src` points to where the image is on the server and `alt` describ
 
 ## Links
 
-To link from your text to another place online, you can use the below code:
+To link from your text to another place online, you'll want to wrap it in `<a>` tag markup. You'll want to use the below code:
 
 ```html
 <!--Opens link in the same tab/window-->
-<a href="https://google.com">
+<a href="https://google.com">Link 1</a>
 
 <!--Opens link in a new tab/window-->
-<a href="https://google.com" target="_blank">
+<a href="https://google.com" target="_blank">Link 2</a>
 ```
+The above code creates your links like so:
+
+<a href="https://google.com">Link 1</a>
+
+<a href="https://google.com" target="_blank">Link 2</a>
 
 Note, as the commented code above the link says, that to open your link in a new tab or new window, simply add the `target="_blank"` attribute to your link markup. You can also use `target="_self"` to open your link in the same window, but the default browser behaviour does not require it.
 
@@ -122,15 +127,19 @@ While you generally want to style your text with a Cascading Style Sheet, aka CS
 An example of an inline style, say changing the color of text, can be done like so:
 
 ```html
-<p style="color:red">This is coral colored text.</p>
+<p style="color:coral">This is coral colored text.</p>
 ```
 
-Notice that in this instance, we're asking the browser to use the `red` color, rather than using Hex code. Hex code generally looks like this: `#FF0000` (red in HEX). You'll want to use Hex code generally, a handy guide to find the color you want can be found here online at [https://htmlcolorcodes.com/color-picker/](https://htmlcolorcodes.com/color-picker/)
+<p style="color:coral">This is coral colored text.</p>
+
+Notice that in this instance, we're asking the browser to use the `coral` color, rather than using Hex code. Hex code generally looks like this: `#f88379` (coral in HEX). You'll want to use Hex code generally, a handy guide to find the color you want can be found here online at [https://htmlcolorcodes.com/color-picker/](https://htmlcolorcodes.com/color-picker/)
 
 Anything doable with CSS can be done with inline styles. You can even add multiple styles, for instance to make our text red and a bigger font size, you can do the below:
 
 ```html
-<p style="color:#ff0000;font-size:18px;">This is some red text at 18px.</p>
+<p style="color:coral;font-size:18px;">This is some red text at 18px.</p>
 ```
+
+<p style="color:coral;font-size:18px;">This is some coral text at 18px.</p>
 
 Note that the `;` is added to the end of each style. Ideally, you should not need to use the `font-size` style attribute since there are other options available to add larger text.  

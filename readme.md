@@ -4,7 +4,7 @@
 
 First thing's first, to create a paragraph of text, simply wrap your text in a `<p>` tag, and then close your paragraph with `</p>`. You can copy and paste the below code to make a paragraph.
 
-``` html`
+``` html
 <p>This ia paragraph of text.</p>
 
 <p>This is another paragraph.</p>

@@ -134,3 +134,79 @@ Anything doable with CSS can be done with inline styles. You can even add multip
 ```
 
 Note that the `;` is added to the end of each style. Ideally, you should not need to use the `font-size` style attribute since there are other options available to add larger text.  
+
+---
+
+
+## Semantic markup (aka: “use the right tool for the job”)
+
+So far we’ve been using HTML tags mostly to make things *look* right.
+
+Semantic markup is when you use HTML tags that describe what something **is**, not just what it **looks like**.
+
+This matters for:
+
+- **Accessibility** (screen readers rely on it)
+- **SEO** (Google is basically a robot reading your page)
+- **Future you** (because you won’t hate your own code later)
+
+### The idea
+
+Instead of making everything a `<div>` like a chaotic gremlin, HTML gives you tags with meaning:
+
+- `<header>` = the top part of a page or section  
+- `<nav>` = navigation links  
+- `<main>` = the main content of the page (only one per page)
+- `<section>` = a grouped section of related content  
+- `<article>` = a standalone piece of content (blog post, news story, etc.)
+- `<aside>` = sidebar or “extra” content  
+- `<footer>` = bottom part of a page or section  
+
+### Example: a basic semantic page layout
+
+Copy/paste this and you’ll look like you know what you’re doing:
+
+```html
+<header>
+  <h1>A Husband’s Guide to HTML</h1>
+
+  <nav>
+    <a href="#paragraphs">Paragraphs</a>
+    <a href="#lists">Lists</a>
+    <a href="#images">Images</a>
+  </nav>
+</header>
+
+<main>
+  <section id="paragraphs">
+    <h2>Paragraphs</h2>
+    <p>This is a paragraph of text.</p>
+  </section>
+
+  <article>
+    <h2>Why semantic HTML matters</h2>
+    <p>
+      Because your page isn’t just for humans. It’s for screen readers, search engines,
+      and future you when you’re debugging at 11:47 PM.
+    </p>
+  </article>
+
+  <aside>
+    <h3>Husband Tip</h3>
+    <p>
+      If you’re using 47 divs to build a page layout, you are not “being flexible”.
+      You are building a mystery novel for the next developer.
+    </p>
+  </aside>
+</main>
+
+<footer>
+  <p>&copy; 2026 Leroy Industries</p>
+</footer>
+```
+
+### Quick rule of thumb
+
+If you can replace a `<div>` with something more specific like `<nav>` or `<section>`, you usually should.
+
+HTML is not just decoration. It’s structure. Think of it like labeling leftovers in the fridge: you *can* throw everything into one unmarked container, but eventually somebody’s going to get hurt.
